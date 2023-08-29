@@ -1,0 +1,32 @@
+ /* Set background color for the entire page */
+ body {
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Style the first row in the left column */
+#left-column .row:first-child {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+}
+
+/* Style the second row in the left column */
+#left-column .row:last-child {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+}
+
+/* Style the right column */
+#right-column {
+    background-color: #2ecc71;
+    color: white;
+    padding: 20px;
+}
+
+/* Style the navbar */
+#navbar {
+    background-color: #333;
+    color: white;
+}
