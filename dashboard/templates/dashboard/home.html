@@ -1,0 +1,30 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block navsearch %}
+
+
+<!-- Search bar in the middle -->
+<form class="d-flex mx-auto stock-search-form" action="" method="POST">
+  {% csrf_token %}
+  <input
+    class="form-control stock-input"
+    name="stock-search"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+  />
+  <input
+    class="form-control form-name"
+    name="form-name"
+    type="search"
+    placeholder="Form Name"
+    aria-label="Form Name"
+  />
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<!-- Display the server response or error -->
+{% if result %}
+<div class="alert alert-success mt-3">{{ result }}</div>
+{% elif error %}
+<div class="alert alert-danger mt-3">{{ error }}</div>
+{% endif %} {% endblock navsearch %}
